@@ -36,7 +36,6 @@ const MENU_DATA = {
     { name: "Strawberry Ice-Cream", price: 40, assembled: { "Strawberry Ice-Cream": 1 }, ingredients: { cone: 1,milk:1,Strawberry:2 } },
     { name: "Watermelon Ice-Cream", price: 40, assembled: { "Watermelon Ice-Cream": 1 }, ingredients: { cone: 1,milk:1,Watermelon:1 } },
     { name: "Lemon Ice-Cream", price: 40, assembled: { "Lemon Ice-Cream": 1 }, ingredients: { cone: 1,milk:1,Lemon:1 } },
-
   ],
   DRINKS: [
     { name: "Avocado Smoothi", price: 30, assembled: { "Avocado Smoothi": 1 }, ingredients: { Avocado: 2 } },
@@ -47,7 +46,7 @@ const MENU_DATA = {
     { name: "Strawberry Smoothi", price: 40, assembled: { "Strawberry Smoothi": 1 }, ingredients: { Strawberry:5 } },
     { name: "Watermelon Smoothi", price: 40, assembled: { "Watermelon Smoothi": 1 }, ingredients: { Watermelon:5 } },
     { name: "Lemon Smoothi", price: 40, assembled: { "Lemon Smoothi": 1 }, ingredients: { Lemon:5 } },
- ]
+  ]
 };
 
 function App() {
@@ -56,7 +55,7 @@ function App() {
 
   const handleSelect = (category, index) => {
     setSelectedItem(MENU_DATA[category][index]);
-    setQty(1); // Reset qty for new selection
+    setQty(1); 
   };
 
   return (
@@ -64,12 +63,12 @@ function App() {
       <div style={styles.card}>
         <h1 style={styles.title}>🍔 BurgerShot | Meal Description Dashboard</h1>
 
-        {/* FOUR SEPARATE DROPDOWNS */}
+        {/* Updated Grid for responsive fit */}
         <div style={styles.selectionGrid}>
           <div style={styles.selectWrapper}>
             <label style={styles.label}>MAIN (BURGERS)</label>
             <select style={styles.select} onChange={(e) => handleSelect('MAINS', e.target.value)}>
-              <option disabled selected>-- Select Burger --</option>
+              <option disabled selected>-- Burger --</option>
               {MENU_DATA.MAINS.map((item, i) => <option key={i} value={i}>{item.name}</option>)}
             </select>
           </div>
@@ -77,7 +76,7 @@ function App() {
           <div style={styles.selectWrapper}>
             <label style={styles.label}>MEALS (COMBOS)</label>
             <select style={styles.select} onChange={(e) => handleSelect('MEALS', e.target.value)}>
-              <option disabled selected>-- Select Meal --</option>
+              <option disabled selected>-- Meal --</option>
               {MENU_DATA.MEALS.map((item, i) => <option key={i} value={i}>{item.name}</option>)}
             </select>
           </div>
@@ -85,7 +84,7 @@ function App() {
           <div style={styles.selectWrapper}>
             <label style={styles.label}>SIDES</label>
             <select style={styles.select} onChange={(e) => handleSelect('SIDES', e.target.value)}>
-              <option disabled selected>-- Select Side --</option>
+              <option disabled selected>-- Side --</option>
               {MENU_DATA.SIDES.map((item, i) => <option key={i} value={i}>{item.name}</option>)}
             </select>
           </div>
@@ -93,15 +92,14 @@ function App() {
           <div style={styles.selectWrapper}>
             <label style={styles.label}>DRINKS</label>
             <select style={styles.select} onChange={(e) => handleSelect('DRINKS', e.target.value)}>
-              <option disabled selected>-- Select Drink --</option>
+              <option disabled selected>-- Drink --</option>
               {MENU_DATA.DRINKS.map((item, i) => <option key={i} value={i}>{item.name}</option>)}
             </select>
           </div>
         </div>
 
-        {/* QUANTITY AND BILL */}
         <div style={styles.billBar}>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, minWidth: '120px' }}>
             <label style={styles.label}>ORDER QUANTITY</label>
             <input type="number" style={styles.qtyInput} value={qty} onChange={(e) => setQty(Math.max(1, parseInt(e.target.value) || 1))} />
           </div>
@@ -111,7 +109,6 @@ function App() {
           </div>
         </div>
 
-        {/* RESULTS SECTION */}
         <div style={styles.contentGrid}>
           <div style={styles.section}>
             <h3 style={styles.sectionHeader}>👨‍🍳 ASSEMBLY LIST</h3>
@@ -144,20 +141,26 @@ const styles = {
   page: { background: '#000', minHeight: '100vh', padding: '20px', fontFamily: 'monospace', color: '#fff' },
   card: { background: '#111', padding: '25px', borderRadius: '12px', maxWidth: '1000px', margin: '0 auto', border: '1px solid #333' },
   title: { color: '#ffcc00', textAlign: 'center', marginBottom: '25px', borderBottom: '2px solid #ffcc00', paddingBottom: '10px' },
-  selectionGrid: { display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '15px', marginBottom: '25px' },
-  selectWrapper: { display: 'flex', flexDirection: 'column' },
+  
+  // FIX: flexWrap allows the 4 boxes to drop to new lines when the window is narrow
+  selectionGrid: { display: 'flex', flexWrap: 'wrap', gap: '15px', marginBottom: '25px' },
+  selectWrapper: { display: 'flex', flexDirection: 'column', flex: '1 1 200px', minWidth: '150px' },
+  
   label: { fontSize: '0.7rem', color: '#888', marginBottom: '5px', fontWeight: 'bold' },
-  select: { padding: '10px', background: '#222', color: '#fff', border: '1px solid #444', borderRadius: '4px', cursor: 'pointer' },
-  billBar: { display: 'flex', background: '#1a1a1a', padding: '20px', borderRadius: '8px', marginBottom: '25px', alignItems: 'center', border: '1px solid #333' },
+  select: { padding: '10px', background: '#222', color: '#fff', border: '1px solid #444', borderRadius: '4px', cursor: 'pointer', width: '100%', boxSizing: 'border-box' },
+  
+  billBar: { display: 'flex', flexWrap: 'wrap', background: '#1a1a1a', padding: '20px', borderRadius: '8px', marginBottom: '25px', alignItems: 'center', border: '1px solid #333', gap: '15px' },
   qtyInput: { width: '80px', padding: '10px', background: '#333', color: '#ffcc00', border: 'none', borderRadius: '4px', fontSize: '1.2rem', fontWeight: 'bold' },
   itemShowcase: { color: '#ffcc00', fontSize: '1.2rem', fontWeight: 'bold' },
   priceShowcase: { color: '#4caf50', fontSize: '1.8rem', fontWeight: 'bold' },
-  contentGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px' },
+  
+  // FIX: auto-fit makes the Assembly and Fridge lists stack when the screen is too small
+  contentGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' },
   sectionHeader: { fontSize: '0.8rem', color: '#666', borderBottom: '1px solid #333', paddingBottom: '5px', marginBottom: '15px' },
   listCard: { background: '#222', padding: '15px', borderRadius: '8px', borderLeft: '5px solid #ffcc00', display: 'flex', alignItems: 'center', marginBottom: '10px' },
   qtyBig: { fontSize: '2rem', fontWeight: 'bold', color: '#ffcc00', marginRight: '15px' },
   nameBig: { fontSize: '1.1rem', color: '#ddd', textTransform: 'uppercase' },
-  fridgeGrid: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' },
+  fridgeGrid: { display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '10px' },
   fridgeItem: { background: '#161616', padding: '10px', borderRadius: '4px', display: 'flex', alignItems: 'center' },
   qtySmall: { color: '#ffcc00', fontWeight: 'bold', marginRight: '10px', fontSize: '1.1rem' },
   nameSmall: { color: '#888', fontSize: '0.8rem' }
