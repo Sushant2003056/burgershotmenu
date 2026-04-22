@@ -62,7 +62,7 @@ function App() {
   return (
     <div style={styles.page}>
       <div style={styles.card}>
-        <h1 style={styles.title}>🍔 BurgerShot | KDS Dashboard</h1>
+        <h1 style={styles.title}>🍔 BurgerShot | Meal Description Dashboard</h1>
 
         {/* FOUR SEPARATE DROPDOWNS */}
         <div style={styles.selectionGrid}>
