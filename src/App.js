@@ -11,15 +11,15 @@ const MENU_DATA = {
   MEALS: [
     { name: "Hunger King", price: 449, assembled: { "Hamburger": 2, "Chicken Nuggets": 2, "Belgian Fries": 2, "Beverages": 4, "Chocolate Ice-Cream": 1 }, ingredients: { Bun: 2, Lettuce: 2, Patty: 2, Breadcrumbs: 2, "Chicken Breast": 2, Potato: 6, Cone: 1, Milk: 1, "Coco Powder": 1, Coke: 4 } },
     { name: "Bacon Monster", price: 539, assembled: { "Bacon Egg Burger": 2, "Bacon Cheese Burger": 2, "Belgian Fries": 2, "Beverages": 4, "Vanilla Ice-Cream": 1 }, ingredients: { Bun: 4, Lettuce: 4, Patty: 4, "Cheese Slice": 4, Bacon: 4, Eggs: 2, Potato: 6, Cone: 1, Milk: 1, Coke: 4 } },
-    { name: "Cheese Hunter", price: 249, assembled: { "Cheese Burger": 2, "Belgian Fries": 2, "Avocado Smoothi": 2 }, ingredients: { Bun: 2, Lettuce: 2, Patty: 2, "Cheese Slice": 2, Potato: 6, Avocado: 4 } },
-    { name: "Stress Attack", price: 250, assembled: { "Veggie Burger": 2, "Belgian Fries": 2, "Avocado Smoothi": 2, "Apple Ice-Cream": 1 }, ingredients: { Bun: 2, Lettuce: 8, Potato: 6, Avocado: 4, Cone: 1, Milk: 1, Apple: 1 } },
+    { name: "Cheese Hunter", price: 249, assembled: { "Cheese Burger": 2, "Belgian Fries": 2, "Avocado Smoothie": 2 }, ingredients: { Bun: 2, Lettuce: 2, Patty: 2, "Cheese Slice": 2, Potato: 6, Avocado: 4 } },
+    { name: "Stress Attack", price: 250, assembled: { "Veggie Burger": 2, "Belgian Fries": 2, "Avocado Smoothie": 2, "Apple Ice-Cream": 1 }, ingredients: { Bun: 2, Lettuce: 8, Potato: 6, Avocado: 4, Cone: 1, Milk: 1, Apple: 1 } },
     { name: "Fry Fun", price: 389, assembled: { "Belgian Fries": 4, "Chicken Nuggets": 4 , "Beverages": 2, "Vanilla Ice-Cream": 1, "Chocolate Ice-Cream": 1 }, ingredients: { Potato: 12, Breadcrumbs: 4, "Chicken Breast": 4, Cone: 2, Milk: 2, "Coco Powder": 1, Coke: 2 } },
     { name: "Snacky Packy", price: 239, assembled: { "Chicken Nuggets": 2, "Belgian Fries": 2, "Beverages": 2, "Banana Ice-Cream": 1 }, ingredients: { Breadcrumbs: 2, "Chicken Breast": 2, Potato: 6, Cone: 1, Milk: 1, Banana: 1, Coke: 2 } },
     { name: "Code Hunger (EMS/PD)", price: 499, assembled: { "Hamburger": 4, "Belgian Fries": 2, "Green cow": 4, "Beverages": 2 }, ingredients: { Bun: 4, Lettuce: 4, Patty: 4, Potato: 6, "Green cow": 4, Coke: 2 } },
     { name: "DOJ Meal", price: 400, assembled: { "Bacon Cheese Burger": 2, "Belgian Fries": 2, "Beverages": 6, "Lemon Ice-Cream": 2 }, ingredients: { Bun: 2, Lettuce: 2, Patty: 2, "Cheese Slice": 2, Bacon: 2, Potato: 6, Cone: 2, Milk: 2, Lemon: 2, coke: 6 } },
-    { name: "Mechanic Special", price: 280, assembled: { "Hamburger": 2, "Chicken Nuggets": 2, "Avocado Smoothi": 2, "beverages": 2 }, ingredients: { Bun: 2, Lettuce: 2,patty:2 ,Breadcrumbs: 2, "Chicken Breast": 2, Avocado: 4, Coke: 2} },
-    { name: "Joe & Jay Special", price: 650, assembled: { "Bacon Egg Burger": 2, "Bacon Cheese Burger": 2, "Cheese Burger": 2, "Beverages": 5, "Vanilla Ice-Cream": 2, "Strawberry Ice-Cream": 2 }, ingredients: { Bun: 6, Lettuce: 6, Patty: 6, "Cheese Slice": 6, Bacon: 4, Egg: 2, Cone: 4, Milk: 4, Strawberry: 4, Coke: 4 } },
-    { name: "Burgershot Supreme", price: 1200, assembled: { "Veggie Burger": 2, "Hamburger": 2, "Cheese Burger": 2, "Bacon Cheese burger": 2, "Bacon Egg Burger": 2, "Chicken Nuggets": 2, "Belgain Fries": 2,"Avocado Smoothi":2,"Green Cow":2, "Beverages": 8, "total Ice-Cream(Each Type 1)": 9,Straw:4 }, ingredients: { Bun: 10, Lettuce: 16, Patty: 8, "Cheese Slice": 6, Bacon: 4, Eggs: 2, Breadcrumbs: 2, "Chicken Breast": 2, Potato: 6, Cone: 9, Milk: 9,"Coco powder":1, Strawberry: 2,Apple:1,Banana:1,Pomegranate:1,Mango:1,Watermelon:1,Lemon:1,"Green Cow":2, Pepsi: 2, Sprite: 2, Fanta: 2, Coke: 2 ,straw:4} },
+    { name: "Mechanic Special", price: 280, assembled: { "Hamburger": 2, "Chicken Nuggets": 2, "Avocado Smoothie": 2, "beverages": 2 }, ingredients: { Bun: 2, Lettuce: 2,patty:2 ,Breadcrumbs: 2, "Chicken Breast": 2, Avocado: 4, Coke: 2} },
+    { name: "Joe & Jay Special", price: 650, assembled: { "Bacon Egg Burger": 2, "Bacon Cheese Burger": 2, "Cheese Burger": 2, "Beverages": 5, "Vanilla Ice-Cream": 2, "Strawberry Ice-Cream": 2 }, ingredients: { Bun: 6, Lettuce: 6, Patty: 6, "Cheese Slice": 6, Bacon: 4, Egg: 2, Cone: 4, Milk: 4, Strawberry: 4, Coke: 5 } },
+    { name: "Burgershot Supreme", price: 1200, assembled: { "Veggie Burger": 2, "Hamburger": 2, "Cheese Burger": 2, "Bacon Cheese burger": 2, "Bacon Egg Burger": 2, "Chicken Nuggets": 2, "Belgain Fries": 2,"Avocado Smoothie":2,"Green Cow":2, "Beverages": 8, "total Ice-Cream(Each Type 1)": 9,Straw:4 }, ingredients: { Bun: 10, Lettuce: 16, Patty: 8, "Cheese Slice": 6, Bacon: 4, Eggs: 2, Breadcrumbs: 2, "Chicken Breast": 2, Potato: 6,Avocado:4, Cone: 9, Milk: 9,"Coco powder":1, Strawberry: 2,Apple:1,Banana:1,Pomegranate:1,Mango:1,Watermelon:1,Lemon:1,"Green Cow":2, Pepsi: 2, Sprite: 2, Fanta: 2, Coke: 2 ,straw:4} },
     { name: "Happy Meal", price: 350, assembled: { "Hamburger": 2, "Cheese Burger": 2, "Fruit Smoothie": 4, "Strawberry Ice-Cream": 1,straw:3 }, ingredients: { Bun: 4, Lettuce: 4, Patty: 4, "Cheese Slice": 2, Fruits: 20, Cone: 1, Milk: 1, Strawberry: 2,straw:3 } }
   ],
   SIDES: [
@@ -38,14 +38,14 @@ const MENU_DATA = {
     { name: "Lemon Ice-Cream", price: 40, assembled: { "Lemon Ice-Cream": 1 }, ingredients: { cone: 1,milk:1,Lemon:1 } },
   ],
   DRINKS: [
-    { name: "Avocado Smoothi", price: 30, assembled: { "Avocado Smoothi": 1 }, ingredients: { Avocado: 2 } },
-    { name: "Banana Smoothi", price: 40, assembled: { "Banana Smoothi": 1 }, ingredients: { Banana:5 } },
-    { name: "Apple Smoothi", price: 40, assembled: { "Apple Smoothi": 1 }, ingredients: { Apple:5 } },
-    { name: "Mango Smoothi", price: 40, assembled: { "Mango Smoothi": 1 }, ingredients: { Mango:5 } },
-    { name: "Pomegranate Smoothi", price: 40, assembled: { "pomegranate Smoothi": 1 }, ingredients: { Pomegranate:5 } },
-    { name: "Strawberry Smoothi", price: 40, assembled: { "Strawberry Smoothi": 1 }, ingredients: { Strawberry:5 } },
-    { name: "Watermelon Smoothi", price: 40, assembled: { "Watermelon Smoothi": 1 }, ingredients: { Watermelon:5 } },
-    { name: "Lemon Smoothi", price: 40, assembled: { "Lemon Smoothi": 1 }, ingredients: { Lemon:5 } },
+    { name: "Avocado Smoothie", price: 30, assembled: { "Avocado Smoothie": 1 }, ingredients: { Avocado: 2 } },
+    { name: "Banana Smoothie", price: 40, assembled: { "Banana Smoothie": 1 }, ingredients: { Banana:5 } },
+    { name: "Apple Smoothie", price: 40, assembled: { "Apple Smoothie": 1 }, ingredients: { Apple:5 } },
+    { name: "Mango Smoothie", price: 40, assembled: { "Mango Smoothie": 1 }, ingredients: { Mango:5 } },
+    { name: "Pomegranate Smoothie", price: 40, assembled: { "pomegranate Smoothie": 1 }, ingredients: { Pomegranate:5 } },
+    { name: "Strawberry Smoothie", price: 40, assembled: { "Strawberry Smoothie": 1 }, ingredients: { Strawberry:5 } },
+    { name: "Watermelon Smoothie", price: 40, assembled: { "Watermelon Smoothie": 1 }, ingredients: { Watermelon:5 } },
+    { name: "Lemon Smoothie", price: 40, assembled: { "Lemon Smoothie": 1 }, ingredients: { Lemon:5 } },
   ]
 };
 
